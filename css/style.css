@@ -436,6 +436,39 @@ section { scroll-margin-top: calc(var(--altura-cabecalho) + 12px); }
   stroke-linejoin: round;
 }
 
+/* Pulseira: o que ela mede e os botoes */
+.lista-marcada { margin-top: 1rem; }
+.lista-marcada li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-top: .85rem;
+  color: var(--texto-suave);
+}
+.lista-marcada li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  /* Alinha o marcador a meia altura da primeira linha, nao do bloco todo. */
+  top: calc(.85em - 4px);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--cor-destaque);
+}
+.lista-marcada strong { color: var(--cor-texto); }
+
+/* Especificacoes tecnicas da pulseira */
+.especificacoes { margin-top: 1.25rem; }
+.cartao--spec { padding: 1.25rem 1.5rem; }
+.spec__nome {
+  font-family: var(--fonte-titulo);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--cor-principal);
+  letter-spacing: -.01em;
+}
+.spec__papel { margin-top: .35rem; color: var(--texto-suave); font-size: .95rem; }
+
 /* Equipe */
 .cartao--pessoa { text-align: center; }
 .avatar {
@@ -530,7 +563,10 @@ section { scroll-margin-top: calc(var(--altura-cabecalho) + 12px); }
 }
 .rodape .marca { color: var(--sobre-principal); font-size: 1.15rem; }
 .rodape .marca__nome { color: var(--sobre-principal); }
-.rodape .marca__simbolo { width: 28px; height: 28px; }
+/* O simbolo tem a bengala desenhada em branco fixo sobre um quadrado que usa
+   currentColor. Herdar o branco do rodape apagaria o desenho, entao aqui o
+   quadrado volta ao roxo da marca. */
+.rodape .marca__simbolo { width: 28px; height: 28px; color: var(--cor-principal); }
 .rodape__texto { font-size: .925rem; }
 
 /* --------------------------------------------------------------------------

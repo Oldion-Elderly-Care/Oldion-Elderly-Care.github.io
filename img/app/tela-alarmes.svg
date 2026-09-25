@@ -38,22 +38,23 @@
     <path d="M264 297l6 6 11-12" fill="none" stroke="#FFFFFF" stroke-width="2.6"
           stroke-linecap="round" stroke-linejoin="round"/>
 
-    <!-- Proxima dose, destacada -->
-    <rect x="18" y="352" width="284" height="108" rx="16" fill="#F3EAFC" stroke="#6F2B9D" stroke-width="2"/>
-    <rect x="34" y="370" width="74" height="22" rx="11" fill="#6F2B9D"/>
-    <text x="45" y="385" fill="#FFFFFF" font-size="11" font-weight="600">AGORA</text>
+    <!-- Proxima dose, destacada. Altura dimensionada para caber os dois botoes
+         com folga: cartao 352..498, botoes 450..484. -->
+    <rect x="18" y="352" width="284" height="146" rx="16" fill="#F3EAFC" stroke="#6F2B9D" stroke-width="2"/>
+    <rect x="34" y="368" width="74" height="22" rx="11" fill="#6F2B9D"/>
+    <text x="45" y="383" fill="#FFFFFF" font-size="11" font-weight="600">AGORA</text>
     <text x="34" y="416" fill="#1F152B" font-size="18" font-weight="600">Sinvastatina 20mg</text>
     <text x="34" y="437" fill="#6E6180" font-size="13">18:00 · 1 comprimido</text>
-    <rect x="34" y="447" width="122" height="34" rx="17" fill="#6F2B9D"/>
-    <text x="57" y="469" fill="#FFFFFF" font-size="13" font-weight="600">Confirmar dose</text>
-    <rect x="166" y="447" width="86" height="34" rx="17" fill="none" stroke="#C9B6DD" stroke-width="1.5"/>
-    <text x="186" y="469" fill="#6E6180" font-size="13" font-weight="500">Adiar</text>
+    <rect x="34" y="450" width="130" height="34" rx="17" fill="#6F2B9D"/>
+    <text x="53" y="472" fill="#FFFFFF" font-size="13" font-weight="600">Confirmar dose</text>
+    <rect x="174" y="450" width="86" height="34" rx="17" fill="none" stroke="#C9B6DD" stroke-width="1.5"/>
+    <text x="198" y="472" fill="#6E6180" font-size="13" font-weight="500">Adiar</text>
 
     <!-- Dose futura -->
-    <rect x="18" y="496" width="284" height="72" rx="16" fill="#FFFFFF" stroke="#E6DDF0"/>
-    <rect x="18" y="496" width="5" height="72" rx="2.5" fill="#E6DDF0"/>
-    <text x="40" y="524" fill="#1F152B" font-size="16" font-weight="600" opacity=".65">Omeprazol 20mg</text>
-    <text x="40" y="546" fill="#6E6180" font-size="13">22:00 · em jejum</text>
+    <rect x="18" y="508" width="284" height="64" rx="16" fill="#FFFFFF" stroke="#E6DDF0"/>
+    <rect x="18" y="508" width="5" height="64" rx="2.5" fill="#E6DDF0"/>
+    <text x="40" y="533" fill="#1F152B" font-size="16" font-weight="600" opacity=".65">Omeprazol 20mg</text>
+    <text x="40" y="554" fill="#6E6180" font-size="13">22:00 · em jejum</text>
 
     <!-- Barra inferior -->
     <rect x="0" y="580" width="320" height="60" fill="#FFFFFF"/>

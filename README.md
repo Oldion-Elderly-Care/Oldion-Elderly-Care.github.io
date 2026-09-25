@@ -1,7 +1,7 @@
 # Oldion — Landing Page
 
-Landing page de apresentação do **Oldion**, sistema de acompanhamento de medicamentos e rotina para
-pessoas idosas. Desenvolvida para a disciplina de **Programação Web III — AMS**.
+Landing page de apresentação do **Oldion**, sistema de monitoramento, cuidado e proteção para
+pessoas idosas. Trabalho de Conclusão de Curso.
 
 🔗 **Página publicada:** https://oldion-elderly-care.github.io/
 
@@ -9,31 +9,49 @@ pessoas idosas. Desenvolvida para a disciplina de **Programação Web III — AM
 
 ## Sobre o projeto
 
-O Oldion é um sistema de cuidado composto por um aplicativo mobile e uma API própria. Ele organiza
-os medicamentos de uma pessoa idosa, registra o que foi realmente tomado e mantém a rede de cuidado
-— familiares e cuidadores — informada, usando recursos nativos do aparelho.
+O Oldion é um sistema completo de acompanhamento e proteção para pessoas idosas, formado por três
+partes que trabalham juntas: uma **pulseira vestível** que coleta os dados do corpo e permite pedir
+ajuda, um **aplicativo mobile** que organiza a rotina e traduz esses dados, e uma **rede de cuidado**
+que mantém a família informada. O objetivo não é vigiar, e sim encurtar a distância entre quem cuida
+e quem é cuidado.
 
 ### Problema
 
-A adesão ao tratamento cai conforme o número de medicamentos aumenta. Dose esquecida, dose repetida
-e horário trocado são rotina para quem toma quatro ou mais remédios por dia. O controle costuma ser
-feito de cabeça, em caderno ou em caixinha semanal — e nenhum deles registra o que foi tomado nem
-avisa quem está de fora. Quando acontece uma queda ou uma emergência, o aviso depende de alguém
-estar por perto.
+Grande parte das pessoas idosas vive sozinha ou passa boa parte do dia sem companhia. Quedas,
+mal-estar e emergências acontecem sem que ninguém saiba, e a rotina de saúde depende inteiramente
+da memória e da disposição de cada dia. A família mora longe ou não tem como estar presente o tempo
+todo, e o acompanhamento vira uma ligação diária que raramente traz informação confiável. Quando
+algo acontece, o tempo entre o ocorrido e o socorro é o que define a gravidade.
 
 ### Solução
 
-O Oldion substitui a memória por registro e a ligação de checagem por histórico compartilhado:
+Três camadas que trabalham juntas:
 
-1. **Cadastre a prescrição** — remédio, dose e horários; o app gera as ocorrências de cada dia.
-2. **Confirme a dose** — um toque, com foto opcional pela câmera como comprovação.
-3. **Quem cuida acompanha** — o cuidador vinculado vê histórico, localização e alertas de queda.
+1. **A pulseira capta** — mede batimentos cardíacos, identifica quedas e coloca dois botões ao
+   alcance do polegar: um para confirmar a medicação, outro para pedir socorro.
+2. **O aplicativo organiza** — conectado por Bluetooth, reúne os dados, cuida da rotina de
+   medicamentos, da localização e do histórico, que continua disponível sem internet.
+3. **A família acompanha** — recebe alertas de queda e emergência com localização, sinais de saúde
+   e a rotina do dia, sem precisar ligar para perguntar.
 
 ### Público-alvo
 
-- **Pessoas idosas em uso contínuo de medicamentos**, que querem autonomia na própria rotina, com
-  texto grande, toque simples e funcionamento sem internet.
-- **Familiares e cuidadores**, que precisam acompanhar à distância sem vigiar.
+- **Pessoas idosas**, especialmente quem mora sozinho ou passa parte do dia sem companhia, e quer
+  manter a independência com a segurança de que, se algo acontecer, alguém vai saber.
+- **Famílias e cuidadores**, que precisam acompanhar de longe sem vigiar e ser avisados
+  imediatamente quando algo sair do normal.
+
+### A pulseira vestível
+
+Principal fonte de dados do sistema, conectada ao aplicativo por Bluetooth:
+
+| Componente | Função |
+| --- | --- |
+| **ESP32** | Microcontrolador e comunicação Bluetooth com o aplicativo |
+| **MAX30102** | Sensor óptico de batimentos cardíacos |
+| **MPU6050** | Acelerômetro e giroscópio para detecção de quedas |
+| **Botão de medicação** | Confirma a dose tomada sem precisar abrir o aplicativo |
+| **Botão de emergência** | Aciona a família e envia a localização exata para socorro rápido |
 
 ---
 
@@ -108,6 +126,7 @@ Sem framework e sem etapa de build: a página é servida exatamente como está n
 
 | Camada | Tecnologias |
 | --- | --- |
+| Pulseira | ESP32, MAX30102, MPU6050, Bluetooth, C++ |
 | Aplicativo | React Native 0.86, Expo SDK 57, React Navigation 7, AsyncStorage, expo-location, expo-sensors, expo-image-picker, expo-contacts |
 | API | Node.js 20, Express 5, Sequelize 6, PostgreSQL, JWT, bcrypt, Zod, Pino |
 | Infraestrutura | Docker Compose, Jest, ESLint, Prettier, GitHub Actions |
@@ -167,11 +186,6 @@ Depois acesse `http://localhost:8000`.
 
 ---
 
-## Projeto relacionado
-
-O código do aplicativo e da API está em
-[Oldion-Elderly-Care/Oldion_Elderly_Care](https://github.com/Oldion-Elderly-Care/Oldion_Elderly_Care).
-
 ## Contato
 
-oldion811@gmail.com
+Para dúvidas sobre o projeto, parcerias ou sugestões: **oldion811@gmail.com**
