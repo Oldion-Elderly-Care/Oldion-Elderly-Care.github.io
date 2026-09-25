@@ -41,13 +41,16 @@
 
 html {
   scroll-behavior: smooth;
-  /* Impede rolagem horizontal sem criar contexto de rolagem que quebre o sticky. */
-  overflow-x: clip;
 }
 
+/* Sem overflow-x aqui nem no <html>. O overflow do elemento raiz propaga para
+   a viewport, e nessa posicao "clip" tem historico de quebrar position:sticky
+   — que e justamente o que segura o cabecalho. Como o layout nao estoura a
+   largura em nenhum breakpoint (verificado de 320px ao desktop, inclusive em
+   paisagem), a trava seria uma rede de seguranca com efeito colateral pior que
+   o risco que cobre. */
 body {
   margin: 0;
-  overflow-x: clip;
   background: var(--cor-fundo);
   color: var(--cor-texto);
   font-family: var(--fonte-texto);
