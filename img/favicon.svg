@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Oldion">
+  <title>Oldion</title>
+  <rect width="64" height="64" rx="15" fill="#6F2B9D"/>
+  <!-- Bengala: haste vertical e alca curvando para a esquerda. -->
+  <path d="M40 52 V27 C40 17.5 32.5 13 26 15.5 C20.5 17.6 18.5 23 20 28.5"
+        fill="none" stroke="#FFFFFF" stroke-width="7"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

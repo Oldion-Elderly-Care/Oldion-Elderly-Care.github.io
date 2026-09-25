@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 76" role="img" aria-label="Oldion">
+  <title>Oldion</title>
+  <!-- Wordmark. Ao inserir este SVG inline no HTML, a fonte Outfit ja carregada
+       pela pagina se aplica; como arquivo solto, cai no fallback do sistema. -->
+  <text x="6" y="46"
+        font-family="Outfit, 'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="46" font-weight="600" letter-spacing="-0.5"
+        fill="currentColor">Oldion</text>
+  <!-- Bengala: o traco que sublinha a palavra curva na ponta e vira a alca. -->
+  <path d="M8 62 H212 C232 62 242 48 234 38 C227 29.5 214 31.5 211 41"
+        fill="none" stroke="currentColor" stroke-width="6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

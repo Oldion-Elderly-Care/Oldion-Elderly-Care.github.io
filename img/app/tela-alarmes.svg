@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 640" role="img"
+     aria-label="Tela do aplicativo Oldion exibindo os horários de medicamentos do dia">
+  <title>Tela de alarmes do Oldion</title>
+  <defs>
+    <clipPath id="tela"><rect x="0" y="0" width="320" height="640" rx="30"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#tela)" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+    <rect width="320" height="640" fill="#FAF8FD"/>
+
+    <!-- Cabecalho -->
+    <rect width="320" height="132" fill="#6F2B9D"/>
+    <text x="24" y="44" fill="#FFFFFF" opacity=".75" font-size="13">Quinta-feira, 15 de setembro</text>
+    <text x="24" y="76" fill="#FFFFFF" font-size="26" font-weight="600"
+          font-family="Outfit, 'Segoe UI', sans-serif">Doses de hoje</text>
+    <rect x="24" y="94" width="128" height="26" rx="13" fill="#FFFFFF" opacity=".18"/>
+    <text x="38" y="112" fill="#FFFFFF" font-size="12" font-weight="500">3 de 5 concluídas</text>
+
+    <!-- Dose concluida -->
+    <rect x="18" y="156" width="284" height="86" rx="16" fill="#FFFFFF" stroke="#E6DDF0"/>
+    <rect x="18" y="156" width="5" height="86" rx="2.5" fill="#0D9488"/>
+    <text x="40" y="186" fill="#1F152B" font-size="17" font-weight="600">Losartana 50mg</text>
+    <text x="40" y="209" fill="#6E6180" font-size="13">08:00 · 1 comprimido</text>
+    <rect x="40" y="219" width="96" height="20" rx="10" fill="#E6F7F3"/>
+    <text x="51" y="233" fill="#0B6B62" font-size="11" font-weight="600">Tomada às 08:04</text>
+    <circle cx="272" cy="199" r="17" fill="#0D9488"/>
+    <path d="M264 199l6 6 11-12" fill="none" stroke="#FFFFFF" stroke-width="2.6"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Dose concluida com foto -->
+    <rect x="18" y="254" width="284" height="86" rx="16" fill="#FFFFFF" stroke="#E6DDF0"/>
+    <rect x="18" y="254" width="5" height="86" rx="2.5" fill="#0D9488"/>
+    <text x="40" y="284" fill="#1F152B" font-size="17" font-weight="600">Metformina 850mg</text>
+    <text x="40" y="307" fill="#6E6180" font-size="13">12:00 · com o almoço</text>
+    <rect x="40" y="317" width="78" height="20" rx="10" fill="#E6F7F3"/>
+    <text x="51" y="331" fill="#0B6B62" font-size="11" font-weight="600">Com foto</text>
+    <circle cx="272" cy="297" r="17" fill="#0D9488"/>
+    <path d="M264 297l6 6 11-12" fill="none" stroke="#FFFFFF" stroke-width="2.6"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Proxima dose, destacada -->
+    <rect x="18" y="352" width="284" height="108" rx="16" fill="#F3EAFC" stroke="#6F2B9D" stroke-width="2"/>
+    <rect x="34" y="370" width="74" height="22" rx="11" fill="#6F2B9D"/>
+    <text x="45" y="385" fill="#FFFFFF" font-size="11" font-weight="600">AGORA</text>
+    <text x="34" y="416" fill="#1F152B" font-size="18" font-weight="600">Sinvastatina 20mg</text>
+    <text x="34" y="437" fill="#6E6180" font-size="13">18:00 · 1 comprimido</text>
+    <rect x="34" y="447" width="122" height="34" rx="17" fill="#6F2B9D"/>
+    <text x="57" y="469" fill="#FFFFFF" font-size="13" font-weight="600">Confirmar dose</text>
+    <rect x="166" y="447" width="86" height="34" rx="17" fill="none" stroke="#C9B6DD" stroke-width="1.5"/>
+    <text x="186" y="469" fill="#6E6180" font-size="13" font-weight="500">Adiar</text>
+
+    <!-- Dose futura -->
+    <rect x="18" y="496" width="284" height="72" rx="16" fill="#FFFFFF" stroke="#E6DDF0"/>
+    <rect x="18" y="496" width="5" height="72" rx="2.5" fill="#E6DDF0"/>
+    <text x="40" y="524" fill="#1F152B" font-size="16" font-weight="600" opacity=".65">Omeprazol 20mg</text>
+    <text x="40" y="546" fill="#6E6180" font-size="13">22:00 · em jejum</text>
+
+    <!-- Barra inferior -->
+    <rect x="0" y="580" width="320" height="60" fill="#FFFFFF"/>
+    <line x1="0" y1="580" x2="320" y2="580" stroke="#E6DDF0"/>
+    <g fill="none" stroke="#6F2B9D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="45" y="600" width="18" height="12" rx="6"/><path d="M54 600v12"/>
+    </g>
+    <circle cx="54" cy="623" r="2" fill="#6F2B9D"/>
+    <g fill="none" stroke="#B0A2C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M154 616s7-6 7-10a7 7 0 1 0-14 0c0 4 7 10 7 10z"/>
+      <path d="M252 605h16M252 611h16M252 617h10"/>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="318" height="638" rx="30" fill="none" stroke="#E6DDF0" stroke-width="2"/>
+</svg>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oldion — Cuidado que aproxima</title>
+  <meta name="description" content="Oldion é um aplicativo de acompanhamento de medicamentos e rotina para pessoas idosas, conectando quem cuida e quem é cuidado.">
+  <meta name="theme-color" content="#6F2B9D">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Oldion — Cuidado que aproxima">
+  <meta property="og:description" content="Organize medicamentos, conecte sua rede de cuidado e acompanhe a rotina.">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="cabecalho" id="cabecalho">
+  <div class="envoltorio cabecalho__linha">
+    <a class="marca" href="#inicio" aria-label="Oldion — início">
+      <svg class="marca__simbolo" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="15" fill="currentColor"/>
+        <path d="M40 52 V27 C40 17.5 32.5 13 26 15.5 C20.5 17.6 18.5 23 20 28.5"
+              fill="none" stroke="#FFFFFF" stroke-width="7"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="marca__nome">Oldion</span>
+    </a>
+
+    <button class="hamburguer" id="botao-menu" type="button"
+            aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
+      <span class="hamburguer__traco" aria-hidden="true"></span>
+      <span class="hamburguer__traco" aria-hidden="true"></span>
+      <span class="hamburguer__traco" aria-hidden="true"></span>
+    </button>
+
+    <nav class="navegacao" id="menu-principal" aria-label="Navegação principal">
+      <ul class="navegacao__lista">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#solucao">Solução</a></li>
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- 4.1 Apresentação inicial -->
+  <section class="hero" id="inicio">
+    <div class="envoltorio hero__grade">
+      <div class="hero__texto">
+        <!-- Logotipo inline: o mesmo desenho de img/logo.svg. Inline porque
+             currentColor nao herda a cor do CSS quando o SVG vem por <img>,
+             e aqui ele precisa sair em branco sobre o fundo roxo. -->
+        <svg class="hero__logo" viewBox="0 0 260 76" role="img"
+             aria-label="Logotipo do Oldion: a palavra Oldion sublinhada por um traço que se curva em forma de bengala">
+          <text x="6" y="46" font-family="Outfit, 'Segoe UI', system-ui, sans-serif"
+                font-size="46" font-weight="600" letter-spacing="-0.5"
+                fill="currentColor">Oldion</text>
+          <path d="M8 62 H212 C232 62 242 48 234 38 C227 29.5 214 31.5 211 41"
+                fill="none" stroke="currentColor" stroke-width="6"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p class="hero__slogan">Cuidado que aproxima</p>
+        <h1 class="hero__titulo">O remédio certo, na hora certa — e quem cuida sabe disso.</h1>
+        <p class="hero__descricao">
+          Organize medicamentos, conecte sua rede de cuidado e acompanhe a rotina.
+          Um aplicativo pensado para quem cuida e para quem é cuidado.
+        </p>
+        <div class="hero__acoes">
+          <a class="botao botao--primario" href="https://github.com/Oldion-Elderly-Care/Oldion_Elderly_Care" target="_blank" rel="noopener">
+            Ver o projeto no GitHub
+          </a>
+          <a class="botao botao--secundario" href="#solucao">Conhecer a solução</a>
+        </div>
+      </div>
+      <div class="hero__arte">
+        <img src="img/app/tela-alarmes.svg" alt="Tela do aplicativo Oldion exibindo os horários de medicamentos do dia" width="320" height="640" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- 4.2 Sobre o projeto -->
+  <section class="secao" id="sobre">
+    <div class="envoltorio">
+      <p class="secao__etiqueta">Sobre o projeto</p>
+      <h2 class="secao__titulo">Um sistema completo de cuidado, não só um lembrete</h2>
+      <p class="secao__intro">
+        O Oldion é um sistema de acompanhamento de medicamentos e rotina para pessoas idosas,
+        composto por um aplicativo mobile e uma API própria. Nasceu como projeto acadêmico de
+        Programação Web III e evoluiu para um sistema funcional ponta a ponta: cadastro, vínculo
+        entre cuidador e idoso, prescrições, registro de doses e recursos nativos do aparelho.
+      </p>
+
+      <ul class="caracteristicas">
+        <li class="caracteristica">
+          <h3>Cuidado compartilhado</h3>
+          <p>Idoso e cuidador têm contas próprias, ligadas por um convite. Cada um vê o que precisa ver.</p>
+        </li>
+        <li class="caracteristica">
+          <h3>Recursos reais do aparelho</h3>
+          <p>GPS, câmera, acelerômetro e agenda — usados para resolver problemas concretos do cuidado.</p>
+        </li>
+        <li class="caracteristica">
+          <h3>Funciona sem internet</h3>
+          <p>Doses, quedas e localizações ficam salvas no aparelho e continuam acessíveis offline.</p>
+        </li>
+        <li class="caracteristica">
+          <h3>Feito para leitura fácil</h3>
+          <p>Texto grande, contraste alto e modo escuro como preferências guardadas no aparelho.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4.3 Problema -->
+  <section class="secao secao--alt" id="problema">
+    <div class="envoltorio">
+      <p class="secao__etiqueta">O problema</p>
+      <h2 class="secao__titulo">Controlar remédios de cabeça não escala</h2>
+
+      <div class="grade-3">
+        <article class="cartao">
+          <h3 class="cartao__titulo">Qual é o problema</h3>
+          <p>
+            A adesão ao tratamento cai conforme o número de medicamentos aumenta. Dose esquecida,
+            dose repetida e horário trocado são rotina para quem toma quatro ou mais remédios por dia.
+          </p>
+        </article>
+        <article class="cartao">
+          <h3 class="cartao__titulo">Em que contexto ocorre</h3>
+          <p>
+            O controle é feito de cabeça, em caderno ou em caixinha semanal. Nenhum deles registra o
+            que foi realmente tomado, e nenhum avisa quem está de fora.
+          </p>
+        </article>
+        <article class="cartao">
+          <h3 class="cartao__titulo">Quem é afetado</h3>
+          <p>
+            A pessoa idosa, que perde a continuidade do tratamento; e o familiar ou cuidador, que só
+            descobre o que aconteceu ligando e perguntando.
+          </p>
+        </article>
+      </div>
+
+      <p class="destaque">
+        E quando acontece uma queda ou uma emergência, o aviso depende de alguém estar por perto.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4.4 Solução -->
+  <section class="secao" id="solucao">
+    <div class="envoltorio">
+      <p class="secao__etiqueta">A solução</p>
+      <h2 class="secao__titulo">Registro no lugar da memória. Aviso no lugar da ligação.</h2>
+
+      <ol class="passos">
+        <li class="passo">
+          <span class="passo__numero" aria-hidden="true">1</span>
+          <h3 class="passo__titulo">Cadastre a prescrição</h3>
+          <p>Remédio, dose e horários. O app gera automaticamente as ocorrências de cada dia.</p>
+        </li>
+        <li class="passo">
+          <span class="passo__numero" aria-hidden="true">2</span>
+          <h3 class="passo__titulo">Confirme a dose</h3>
+          <p>Um toque para confirmar ou ignorar, com foto opcional pela câmera como comprovação.</p>
+        </li>
+        <li class="passo">
+          <span class="passo__numero" aria-hidden="true">3</span>
+          <h3 class="passo__titulo">Quem cuida acompanha</h3>
+          <p>O cuidador vinculado vê o histórico de doses, a localização e os alertas de queda.</p>
+        </li>
+      </ol>
+
+      <div class="solucao__fecho">
+        <p>
+          Cada etapa responde diretamente a um ponto do problema: o registro substitui a memória, o
+          histórico compartilhado substitui a ligação de checagem, e a detecção de queda substitui a
+          sorte de ter alguém por perto.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4.5 Público-alvo -->
+  <section class="secao secao--alt" id="publico">
+    <div class="envoltorio">
+      <p class="secao__etiqueta">Público-alvo</p>
+      <h2 class="secao__titulo">Para quem o Oldion é feito</h2>
+
+      <div class="grade-2">
+        <article class="cartao cartao--publico">
+          <h3 class="cartao__titulo">Pessoas idosas em uso contínuo de medicamentos</h3>
+          <p>
+            Quem quer autonomia na própria rotina, sem depender de alguém para lembrar. Texto grande,
+            toque simples e funcionamento sem internet.
+          </p>
+        </article>
+        <article class="cartao cartao--publico">
+          <h3 class="cartao__titulo">Familiares e cuidadores</h3>
+          <p>
+            Quem precisa acompanhar à distância sem vigiar. Histórico de doses, localização quando
+            necessário e alerta automático de queda.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4.6 Funcionalidades -->
+  <section class="secao" id="funcionalidades">
+    <div class="envoltorio">
+      <p class="secao__etiqueta">Funcionalidades</p>
+      <h2 class="secao__titulo">O que o aplicativo faz hoje</h2>
+
+      <ul class="grade-cards">
+        <li class="cartao cartao--func">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <rect x="3" y="8" width="18" height="8" rx="4"/><path d="M12 8v8"/>
+          </svg>
+          <h3 class="cartao__titulo">Prescrições e alarmes</h3>
+          <p>Cadastro de remédios com horários e geração automática das doses do dia.</p>
+        </li>
+        <li class="cartao cartao--func">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20 6 9 17l-5-5"/>
+          </svg>
+          <h3 class="cartao__titulo">Confirmação de dose</h3>
+          <p>Registro de dose tomada ou ignorada, com foto opcional pela câmera.</p>
+        </li>
+        <li class="cartao cartao--func">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M17 11h4M19 9v4"/>
+          </svg>
+          <h3 class="cartao__titulo">Vínculo de cuidado</h3>
+          <p>O cuidador convida o idoso por e-mail ou direto pela agenda do telefone.</p>
+        </li>
+        <li class="cartao cartao--func">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/>
+          </svg>
+          <h3 class="cartao__titulo">Localização em tempo real</h3>
+          <p>GPS com indicador de confiabilidade da leitura, para saber o quanto confiar no ponto.</p>
+        </li>
+        <li class="cartao cartao--func">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 3 2.5 20h19L12 3z"/><path d="M12 10v4"/><path d="M12 17.2v.1"/>
+          </svg>
+          <h3 class="cartao__titulo">Detecção de queda</h3>
+          <p>O acelerômetro identifica impacto forte e bloqueia confirmações durante instabilidade.</p>
+        </li>
+        <li class="cartao cartao--func">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 10h18"/><path d="M7.5 14.5h5"/>
+          </svg>
+          <h3 class="cartao__titulo">Histórico offline</h3>
+          <p>Doses, quedas e localizações ficam no aparelho e continuam disponíveis sem internet.</p>
+        </li>
+        <li class="cartao cartao--func">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor" stroke="none"/>
+          </svg>
+          <h3 class="cartao__titulo">Modo escuro e texto grande</h3>
+          <p>Preferências de acessibilidade salvas no próprio aparelho, aplicadas em todas as telas.</p>
+        </li>
+        <li class="cartao cartao--func">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <rect x="4.5" y="10.5" width="15" height="9.5" rx="2.5"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/>
+          </svg>
+          <h3 class="cartao__titulo">Conta protegida</h3>
+          <p>Senha criptografada, sessão por token e validação de todos os dados enviados à API.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4.7 Equipe -->
+  <section class="secao secao--alt" id="equipe">
+    <div class="envoltorio">
+      <p class="secao__etiqueta">Equipe</p>
+      <h2 class="secao__titulo">Quem construiu o Oldion</h2>
+
+      <ul class="grade-3">
+        <li class="cartao cartao--pessoa">
+          <span class="avatar" aria-hidden="true">MZ</span>
+          <h3 class="cartao__titulo">Murilo Monteiro Zanetti</h3>
+          <ul class="funcoes">
+            <li>Backend</li><li>Frontend</li><li>Dados</li><li>Hardware</li>
+          </ul>
+        </li>
+        <li class="cartao cartao--pessoa">
+          <span class="avatar" aria-hidden="true">FG</span>
+          <h3 class="cartao__titulo">Felipe Torres González</h3>
+          <ul class="funcoes">
+            <li>Frontend</li>
+          </ul>
+        </li>
+        <li class="cartao cartao--pessoa">
+          <span class="avatar" aria-hidden="true">MC</span>
+          <h3 class="cartao__titulo">Murilo Duarte Carpinedo</h3>
+          <ul class="funcoes">
+            <li>Design</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4.8 Tecnologias -->
+  <section class="secao" id="tecnologias">
+    <div class="envoltorio">
+      <p class="secao__etiqueta">Tecnologias</p>
+      <h2 class="secao__titulo">Como o Oldion foi construído</h2>
+
+      <div class="grade-2 tecnologias">
+        <article class="cartao">
+          <h3 class="cartao__titulo">Aplicativo</h3>
+          <ul class="pilulas">
+            <li>React Native 0.86</li><li>Expo SDK 57</li><li>React Navigation 7</li>
+            <li>AsyncStorage</li><li>expo-location</li><li>expo-sensors</li>
+            <li>expo-image-picker</li><li>expo-contacts</li>
+          </ul>
+        </article>
+        <article class="cartao">
+          <h3 class="cartao__titulo">API</h3>
+          <ul class="pilulas">
+            <li>Node.js 20</li><li>Express 5</li><li>Sequelize 6</li><li>PostgreSQL</li>
+            <li>JWT</li><li>bcrypt</li><li>Zod</li><li>Pino</li>
+          </ul>
+        </article>
+        <article class="cartao">
+          <h3 class="cartao__titulo">Infraestrutura e qualidade</h3>
+          <ul class="pilulas">
+            <li>Docker Compose</li><li>Jest</li><li>ESLint</li><li>Prettier</li><li>GitHub Actions</li>
+          </ul>
+        </article>
+        <article class="cartao">
+          <h3 class="cartao__titulo">Esta landing page</h3>
+          <ul class="pilulas">
+            <li>HTML5 semântico</li><li>CSS3 (Grid e Flexbox)</li><li>JavaScript</li><li>GitHub Pages</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4.9 Chamada para ação -->
+  <section class="chamada" id="contato">
+    <div class="envoltorio chamada__conteudo">
+      <h2 class="chamada__titulo">Quer conhecer o Oldion de perto?</h2>
+      <p class="chamada__texto">
+        O código do aplicativo e da API está aberto no GitHub. Para dúvidas, parcerias ou
+        sugestões, fale com a equipe.
+      </p>
+      <div class="chamada__acoes">
+        <a class="botao botao--claro" href="https://github.com/Oldion-Elderly-Care/Oldion_Elderly_Care" target="_blank" rel="noopener">
+          Ver o código no GitHub
+        </a>
+        <a class="botao botao--contorno" href="mailto:oldion811@gmail.com">oldion811@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="envoltorio rodape__conteudo">
+    <a class="marca marca--rodape" href="#inicio">
+      <svg class="marca__simbolo" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="15" fill="currentColor"/>
+        <path d="M40 52 V27 C40 17.5 32.5 13 26 15.5 C20.5 17.6 18.5 23 20 28.5"
+              fill="none" stroke="#FFFFFF" stroke-width="7"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="marca__nome">Oldion</span>
+    </a>
+    <p class="rodape__texto">
+      Projeto acadêmico — Programação Web III · AMS · <span id="ano">2026</span>
+    </p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
