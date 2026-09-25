@@ -352,11 +352,14 @@ section { scroll-margin-top: calc(var(--altura-cabecalho) + 12px); }
   gap: 1.25rem;
   margin-top: 2.5rem;
 }
-.grade-2        { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-.grade-3        { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.grade-cards    { grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); }
-.caracteristicas{ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.passos         { grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+/* O min() e obrigatorio: em minmax(300px, 1fr) o minimo e rigido, entao numa
+   tela de 320px (container de 280px) a coluna forcaria 300px e estouraria a
+   largura. min(300px, 100%) deixa a coluna encolher junto com o container. */
+.grade-2        { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.grade-3        { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+.grade-cards    { grid-template-columns: repeat(auto-fit, minmax(min(255px, 100%), 1fr)); }
+.caracteristicas{ grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+.passos         { grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr)); }
 
 .cartao {
   background: var(--superficie);
@@ -484,9 +487,10 @@ section { scroll-margin-top: calc(var(--altura-cabecalho) + 12px); }
   white-space: nowrap;
 }
 
-/* Cartoes de tecnologia sao listas curtas: colunas mais estreitas deixam os
-   quatro blocos lado a lado no desktop em vez de dois altos e vazios. */
-.tecnologias { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+/* Cartoes largos: com tres colunas o cartao fica com ~250px uteis e cada
+   nome de biblioteca ocupa uma linha inteira. Em duas colunas cabem tres
+   pilulas por linha e o bloco fica compacto. */
+.tecnologias { grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); }
 
 /* --------------------------------------------------------------------------
    Chamada para acao e rodape
